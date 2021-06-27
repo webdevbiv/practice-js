@@ -43,7 +43,7 @@
 // const distance = 617.54
 // const login = "mango935"
 // let isOnline = true
-// let isAdmin = false 
+// let isAdmin = false
 
 // todo: задание 4
 // *Дополни код, присвоив переменной totalPrice выражение для подсчёта общей суммы заказа.
@@ -74,7 +74,7 @@
 // const message = `You picked ${productName}, price per item is ${pricePerItem} credits`
 // console.log(message)
 
-// todo: задание 6 
+// todo: задание 6
 // *Магазин по продаже ремонтных дроидов готов к открытию, осталось написать скрипт для их заказа. Объяви переменные и присвой им соответствующие значения:
 
 // *pricePerDroid - цена одного дроида, значение 800
@@ -83,7 +83,7 @@
 // *totalPrice - общая сумма заказа к оплате, не забудь о стоимости доставки
 // *message - сообщение о состоянии заказа в формате "You ordered droids worth <total price> credits. Delivery (<delivery fee> credits) is included in total price."
 
-// ? 
+// ?
 
 // const pricePerDroid = 800
 // const orderedQuantity = 6
@@ -255,3 +255,124 @@
 // console.log(isValidPassword("mangodab3st"))
 // console.log(isValidPassword("kiwirul3z"));
 // console.log(isValidPassword("jqueryismyjam"));
+
+// todo: задание 15
+
+// *Добавь выражение проверки совершеннолетия пользователя, значения параметра age, в условие для инструкции if.
+
+// *Если пользователь совершеннолетний, должен выполняться блок if и в переменную message записывается строка "You are an adult".
+// *В противном случае должен выполняться блок else и записывается строка "You are a minor".
+
+// ?
+
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     message = 'You are an adult';
+//   } else {
+//     message = 'You are a minor';
+//   }
+
+//   return message;
+// }
+
+// console.log(checkAge(20))
+// console.log(checkAge(8))
+// console.log(checkAge(14))
+// console.log(checkAge(38))
+
+// todo: задание 16
+
+// *Функция checkStorage(available, ordered) проверяет возможность оформления заказа и возвращает сообщение о результате.
+// *Она объявляет два параметра, значения которых будут задаваться во время её вызова:
+
+// *available - общее количество товаров на складе
+// *ordered - единиц товара в заказе
+// *Используя ветвления дополни код функции так, что:
+
+// *Если в заказе указано число, превышающее количество товаров на складе, в переменную message записывается строка "Not enough goods in stock!".
+// *В противном случае записывается строка "Order is processed, our manager will contact you.".
+
+// ?
+
+// function checkStorage(available, ordered) {
+//  let message
+//     if (available>ordered) {
+// message = 'Order is processed, our manager will contact you.'
+//     } else {
+//         message = 'Not enough goods in stock!'
+//     }
+
+//     return message;
+// }
+
+// console.log(checkStorage(100, 50))
+// console.log(checkStorage(100, 130))
+// console.log(checkStorage(200, 20))
+// console.log(checkStorage(200, 150))
+// console.log(checkStorage(150, 180))
+
+// todo: задание 17
+
+// *Замени выражения со стандартными математеческими операторами на комбинированный оператор присвоения с добавлением, вычитанием, умножением и делением.
+
+// ?
+
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// // Change code below this line
+// a += 2;
+// b -= 4 ;
+// c *= 3;
+// d /= 10;
+
+// todo: задание 18
+
+// *Станция по продаже ремонтных дроидов готова к запуску, осталось написать программное обеспечение для отдела продаж.
+
+// *Функция makeTransaction(pricePerDroid, orderedQuantity, customerCredits) выполняет транзакцию по продаже дроидов и возвращает сообщение о результате операции. Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+
+// *pricePerDroid - цена одного дроида
+// *orderedQuantity - кол-во заказанных дроидов
+// *customerCredits - сумма средств на счету клиента
+// *Дополни её следующим функционалом:
+
+// *Объяви переменную totalPrice для хранения общей суммы заказа и присвой ей выражение расчёта этой суммы.
+// *Добавь проверку сможет ли клиент оплатить заказ:
+// *если сумма к оплате превышает количество кредитов на счету клиента, запиши в переменную message строку "Insufficient funds!";
+// *в противном случае, вычти сумму покупки со счёта клиента и запиши в переменную message сообщение: "You ordered <число> droids, you have <число> credits left".
+
+// ?
+
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//   let message;
+//   // Change code below this line
+//   let totalPrice = pricePerDroid * orderedQuantity
+//   if (totalPrice > customerCredits) {
+//     message = 'Insufficient funds!';
+//   }
+//   else {
+//     message = `You ordered ${orderedQuantity} droids, you have ${customerCredits - totalPrice} credits left`;
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(makeTransaction(3000, 5, 23000))
+// console.log(makeTransaction(1000, 3, 15000))
+// console.log(makeTransaction(5000, 10, 8000))
+// console.log(makeTransaction(2000, 8, 10000))
+// console.log(makeTransaction(500, 10, 5000))
+
+// todo: задание 19
+
+//  *Функция checkPassword(password) получает пароль пользователя в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения, хранящееся в переменной message.
+
+//  *Если значение параметра password равно null, значит пользователь отменил операцию и в message записывается строка "Canceled by user!".
+//  *Если значение параметра password совпадает со значением ADMIN_PASSWORD, в переменную message присваивается строка "Welcome!".
+//  *Если ни одно из предыдущих условий не выполнилось, в переменную message записывается строка "Access denied, wrong password!".
