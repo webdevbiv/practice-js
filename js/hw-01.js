@@ -376,3 +376,422 @@
 //  *Если значение параметра password равно null, значит пользователь отменил операцию и в message записывается строка "Canceled by user!".
 //  *Если значение параметра password совпадает со значением ADMIN_PASSWORD, в переменную message присваивается строка "Welcome!".
 //  *Если ни одно из предыдущих условий не выполнилось, в переменную message записывается строка "Access denied, wrong password!".
+
+// ?
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+
+//   if (password === null) { // Change this line
+//     message =  'Canceled by user!';
+//   } else if (password === ADMIN_PASSWORD) { // Change this line
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+
+//   return message;
+// }
+
+// console.log(checkPassword("mangohackzor"))
+// console.log(checkPassword(null))
+// console.log(checkPassword("polyhax"))
+// console.log(checkPassword("jqueryismyjam"))
+
+// todo: задание 20
+
+// *Функция checkStorage(available, ordered) проверяет возможность оформления заказа и возвращает сообщение о результате. Она объявляет два параметра, значения которых будут задаваться во время её вызова.
+
+// *available - доступное количество товаров на складе
+// *ordered - единиц товара в заказе
+// *Используя ветвления дополни код функции так, что:
+
+// *Если в заказе еще нет товаров, то есть значение параметра ordered равно 0, в переменную message присваивается строка "There are no products in the order!".
+// *Eсли товаров в заказе больше чем доступно товаров на складе, то в переменную message присваивается строка "Your order is too large, there are not enough items in stock!".
+// *В противном случае в переменную message присваевается строка "The order is accepted, our manager will contact you".
+
+// ?
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//     if (ordered === 0) {
+//     message = 'There are no products in the order!'
+//     }
+//     else if (ordered > available) {
+//         message = 'Your order is too large, there are not enough items in stock!'
+//     }
+//     else {
+//         message = 'The order is accepted, our manager will contact you'
+//         }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
+// todo: задание 21
+
+// Функция isNumberInRange(start, end, number) проверяет, входит ли число в промежуток.
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+
+// number - число, вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isInRange выражение проверки вхождения number в числовой промеждуток от start до end.
+// То есть число должно быть больше либо равно start и меньше либо равно end.
+// Результатом выражения проверки будет буль true или false.
+
+// ?
+
+// function isNumberInRange(start, end, number) {
+//   const isInRange = number > start && number < end; // Change this line
+
+//   return isInRange;
+// }
+
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+// console.log(isNumberInRange(20, 50, 24));
+// console.log(isNumberInRange(20, 50, 76));
+
+// todo: задание 22
+
+// Функция checkIfCanAccessContent(subType) проверяет, может ли пользователь получить доступ к контенту.
+// Проверка происходит по типу подписки.
+// Получить доступ могут только пользователи с подпиской pro или vip.
+
+// Присвой переменной canAccessContent выражение проверки подписки.
+// Если значение параметра subType равно строкам "pro" или "vip", пользователь получит доступ.
+// Результатом выражения проверки будет буль true или false.
+
+// ?
+
+// function checkIfCanAccessContent(subType) {
+//   const canAccessContent = subType === 'vip' || subType === 'pro'   ; // Change this line
+
+//   return canAccessContent;
+// }
+
+// console.log(checkIfCanAccessContent("pro"));
+// console.log(checkIfCanAccessContent("starter"));
+// console.log(checkIfCanAccessContent("vip"));
+// console.log(checkIfCanAccessContent("free"));
+
+// todo: задание 23
+
+// Функция isNumberNotInRange(start, end, number) проверяет, не входит ли число в промежуток.
+// То есть число должно быть меньше либо равно start и больше либо равно end.
+// Результатом выражения проверки будет буль true или false.
+
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+
+// number - число, не вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isNotInRange выражение инверсии значения переменной isInRange используя оператор !.
+
+// ?
+
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !isInRange; // Change this line
+
+//   return isNotInRange;
+// }
+
+// console.log(isNumberNotInRange(10, 30, 17));
+// console.log(isNumberNotInRange(10, 30, 5));
+// console.log(isNumberNotInRange(20, 50, 24));
+// console.log(isNumberNotInRange(20, 50, 76));
+
+// todo: задание 24
+
+// Функция getDiscount(totalSpent) определяет значение скидки в зависимости от общей суммы потраченных денег(параметр totalSpent) в магазине за всё время(партнёрская программа).
+// Скидка записывается в переменную discount и возвращается из функции как результат её работы.
+
+// Используя ветвления и логические операторы, дополни код функции.
+
+// Если потрачено от 50000 ( включительно ) или больше кредитов - скидка 10% (золотой партнёр)
+// Если потрачено от 20000 (включительно) до 50000 кредитов - скидка 5% (серебрянный партнёр)
+// Если потрачено от 5000 (включительно) до 20000 кредитов - скидка 2% (бронзовый партнёр)
+// Если потрачено меньше чем 5000 кредитов - скидка 0 (базовый партнёр)
+// Значения скидок каждого уровня хранятся в одноимённых константах BASE_DISCOUNT, BRONZE_DISCOUNT, SILVER_DISCOUNT и GOLD_DISCOUNT.
+
+// ?
+
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+//     if (totalSpent < 5000) {
+//         discount = BASE_DISCOUNT
+//     }
+//     else if (5000 <= totalSpent &&  totalSpent < 20000) {
+//         discount = BRONZE_DISCOUNT
+//     }
+//     else if (20000 <= totalSpent &&  totalSpent < 50000) {
+//         discount = SILVER_DISCOUNT
+//     }
+//     else {
+//         discount = GOLD_DISCOUNT
+//     }
+
+//   // Change code above this line
+//   return discount;
+// }
+
+// console.log(getDiscount(137000));
+// console.log(getDiscount(46900));
+// console.log(getDiscount(8250));
+// console.log(getDiscount(1300));
+// console.log(getDiscount(5000));
+// console.log(getDiscount(20000));
+// console.log(getDiscount(50000));
+
+// todo: задание 25
+
+// Выполни рефакторинг решения задачи «Склад товаров», заменив инструкцию if...else тернарным оператором.
+
+// ?
+
+// function checkStorage(available, ordered) {
+//     let message;
+//     // Change code below this line
+
+//     message = ordered < available ? "The order is accepted, our manager will contact you" : "Not enough goods in stock!";
+
+//     // Change code above this line
+//     return message;
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
+
+// todo: задание 26
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+//     message = password === ADMIN_PASSWORD ? 'Access is allowed' : 'Access denied, wrong password!';
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkPassword("jqueryismyjam"));
+// console.log(checkPassword("angul4r1sl1f3"));
+// console.log(checkPassword("r3actsux"));
+
+
+// todo: задание 27
+
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
+
+//  switch (type) { // Change this line
+//      case "professional": // Change this line
+//       price = 20; // Change this line
+//       break;
+
+//      case "organization": // Change this line
+//       price = 50; // Change this line
+//       break;
+
+//      case "starter": // Change this line
+//       price = 0; // Change this line
+//       break;
+//   }
+
+//   // Change code above this line
+//   return price;
+// }
+
+// console.log(getSubscriptionPrice("professional"));
+// console.log(getSubscriptionPrice("organization"));
+// console.log(getSubscriptionPrice("starter"));
+
+// todo: задание 28
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+
+//     switch (password) {
+//         case null:
+//             message = 'Canceled by user!'
+//             break;
+//         case "jqueryismyjam" :
+//             message = 'Welcome!'
+//             break;
+//         default:
+//             message = 'Access denied, wrong password!'
+//             break;
+// }
+
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword(null));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+// todo: задание 29
+
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+//     switch (country) {
+//         case "China":
+//             message = `Shipping to ${country} will cost 100 credits`
+//             break;
+//         case "Chile":
+//             message = `Shipping to ${country} will cost 250 credits`
+//             break;
+//         case "Australia":
+//             message = `Shipping to ${country} will cost 170 credits`
+//             break;
+//         case "Jamaica":
+//             message = `Shipping to ${country} will cost 120 credits`
+//             break;
+//         default:
+//             message = 'Sorry, there is no delivery to your country'
+//     }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(getShippingCost("Australia"));
+// console.log(getShippingCost("Germany"));
+// console.log(getShippingCost("China"));
+// console.log(getShippingCost("Chile"));
+// console.log(getShippingCost("Jamaica"));
+// console.log(getShippingCost("Sweden"));
+
+// todo: задание 30 
+
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
+
+//   return message;
+// }
+
+// console.log(getNameLength("Poly"));
+// console.log(getNameLength("Harambe"));
+// console.log(getNameLength("Billy"));
+// console.log(getNameLength("Joe"));
+
+// todo: задание 31
+
+// const courseTopic = "JavaScript essentials";
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// // Change code above this line
+
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+
+// todo: задание 32
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length) ; // Change this line
+
+//   return substring;
+// }
+
+// console.log(getSubstring("Hello world", 3));
+// console.log(getSubstring("Hello world", 6));
+// console.log(getSubstring("Hello world", 8));
+// console.log(getSubstring("Hello world", 11));
+// console.log(getSubstring("Hello world", 0));
+
+// todo: задание 33
+
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+// result = message.length <= maxLength ? message.slice(0,maxLength) : message.slice(0,maxLength) + "..."
+//   /// Change code above this line
+//   return result;
+// }
+
+// console.log(formatMessage("Curabitur ligula sapien", 16));
+// console.log(formatMessage("Curabitur ligula sapien", 23));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 20));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 30));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
+
+// todo: задание 34
+
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase() ; // Change this line
+
+//   return normalizedInput;
+// }
+
+// console.log(normalizeInput("Hello world"));
+// console.log(normalizeInput("This ISN'T SpaM"));
+// console.log(normalizeInput("Big SALE"));
+
+// todo: задание 35
+
+// function checkForName(fullName, name) {
+//  const result = fullName.includes(name) ; // Change this line
+//   return result;
+// }
+
+// console.log(checkForName("Egor Kolbasov", "Egor"));
+// console.log(checkForName("Egor Kolbasov", "egor"));
+// console.log(checkForName("Egor Kolbasov", "egOr"));
+// console.log(checkForName("Egor Kolbasov", "Zhenya"));
+// console.log(checkForName("Vadim Nekrasov", "Vadim"));
+// console.log(checkForName("Vadim Nekrasov", "vadim"));
+// console.log(checkForName("Vadim Nekrasov", "Dima"));
+
+
+// todo: задание 36
+
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+    
+//     if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
+//         result = true
+//     }
+//     else {
+//         result = false
+//     }
+
+//   // Change code above this line
+//   return result;
+// }
+
+// console.log(checkForSpam("Latest technology news"));
+// console.log(checkForSpam("JavaScript weekly newsletter"));
+// console.log(checkForSpam("Get best sale offers now!"));
+// console.log(checkForSpam("Amazing SalE, only tonight!"));
+// console.log(checkForSpam("Trust me, this is not a spam message"));
+// console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
+// console.log(checkForSpam("[SPAM] How to earn fast money?"));
