@@ -426,4 +426,3 @@
 // console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
 // console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
-  
