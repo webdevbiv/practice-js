@@ -151,8 +151,8 @@
 //   // Change code below this line
 //     [emailInputName]: 'henry.carter@aptmail.com',
 //     [passwordInputName]: 'jqueryismyjam'
-  
-  
+
+
 //   // Change code above this line
 // };
 
@@ -253,7 +253,7 @@
 // function countProps(object) {
 //   // Change code below this line
 //     let propCount = 0;
-    
+
 //     const keys = Object.keys(object)
 //   for (const key of keys) {
 //       propCount += 1;
@@ -490,3 +490,290 @@
 // } = forecast;
 
 // todo: задание 26
+// // Change code below this line
+// function calculateMeanTemperature(
+//     {
+//         today: {
+//             high: todayHigh,
+//             low: todayLow,
+//         },
+//         tomorrow: {
+//             high: tomorrowHigh,
+//             low: tomorrowLow,
+//         }
+//     } = forcast
+// ) {
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// function calculateMeanTemperature(forecast) {
+//    const  {
+//       today: {
+//             high: todayHigh,
+//             low: todayLow,
+//         },
+//         tomorrow: {
+//             high: tomorrowHigh,
+//             low: tomorrowLow,
+//         }
+//   } = forecast
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+
+// console.log(calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }));
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }));
+
+// todo: задание 27
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores)
+// const worstScore = Math.min(...scores)
+
+// console.log(bestScore, worstScore);
+
+// todo: задание 28
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores)
+// const worstScore = Math.min(...allScores)
+
+// todo: задание 29
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = {...defaultSettings, ...overrideSettings};
+
+// console.log(finalSettings);
+
+// todo: задание 30
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'General';
+//   const priority = 'Normal';
+//   // Change code below this line
+// const dataUpd = { completed, category, priority, ...data };
+// return dataUpd;
+
+//   // Change code above this line
+// }
+
+// console.log(makeTask({}));
+
+// todo: задание 31
+
+// // Change code below this line
+// function add(...args) {
+//     let total = 0
+//     for (const number of args) {
+//         total += number
+//     }
+//     return total
+//   // Change code above this line
+// }
+
+// console.log(add(74, 11, 62, 46, 12, 36));
+
+// todo: задание 32
+
+// // Change code below this line
+// function addOverNum(firstNumber,  ...args) {
+//   let total = 0;
+
+//     for (const arg of args) {
+//       if (arg > firstNumber) {
+//           total += arg;
+//           }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+
+// todo: задание 33
+
+// Change code below this line
+// function findMatches(array1, ...array2) {
+//     const matches = []; // Don't change this line
+//     for (const arrayItem1 of array1) {
+//         // console.log(arrayItem1, array1, array2);
+//         for (const arrayItem2 of array2) {
+//             if (arrayItem1 === arrayItem2) {
+//                 matches.push(arrayItem1)
+//             }
+//         }
+//     }
+//   // Change code above this line
+//     return matches;
+// }
+
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+
+// function findMatches(array1, ...array2) {
+//     const matches = []; // Don't change this line
+//     for (const arrayItem1 of array1) {
+//         // console.log(arrayItem1, array1, array2);
+
+//             if (arrayItem1 === array2) {
+//                 matches.push(arrayItem1)
+//             }
+//     }
+//   // Change code above this line
+//     return matches;
+// }
+
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+
+// todo: задание 34
+
+// const bookShelf = {
+//   // Change code below this line
+//   books: ['The last kingdom', 'The guardian of dreams'],
+//   getBooks() {
+//     return 'Returning all books'
+//   },
+//     addBook(bookName) {
+//     return `Adding book ${bookName}`
+//     },
+//     removeBook(bookName) {
+//      return `Deleting book ${bookName}`
+//     },
+//     updateBook(oldName, newName) {
+//        return `Updating book ${oldName} to ${newName}`
+//     }
+//   // Change code above this line
+// };
+
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+// todo: задание 35
+
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+// this.books.splice(this.books.indexOf(oldName), 1, newName)
+//     // Change code above this line
+//   },
+// };
+
+// console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+
+// todo: задание 37
+
+// const atTheOldToad = {
+//   // Change code below this line
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     getPotions() {
+//     return this.potions
+//   }
+//   // Change code above this line
+
+// };
+
+// console.log(atTheOldToad.getPotions());
+
+// todo: задание 38
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   addPotion(potionName) {
+//     // Change code below this line
+//       this.potions.push(potionName)
+//     // Change code above this line
+//   },
+// };
+
+// todo: задание 39
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//       const potionIndex = this.potions.indexOf(potionName)
+//     this.potions.splice(potionIndex, 1)
+//     // Change code above this line
+//   },
+// };
+
+// todo: задание 40
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//  this.potions.splice(this.potions.indexOf(oldName), 1, newName)
+//     // Change code above this line
+//   },
+// };
+
+// todo: задание 41
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//     },
+
+//   addPotion(potionName) {
+//     if (this.potions.includes(potionName)) {
+//       return `Potion ${potionName} is already equipped!`;
+//     }
+
+//     this.potions.push(potionName);
+//     },
+
+
+
+//     removePotion(potionName) {
+//     const { potions } = this;
+//     for (const potion of potions) {
+//       if (potion.name === potionName) {
+//         potions.splice(potions.indexOf(potion), 1);
+//         return potion;
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+
+
+
+//     updatePotionName(oldName, newName) {
+//     const { potions } = this;
+//     for (const potion of potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//         return potion;
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
+
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
