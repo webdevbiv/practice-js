@@ -6,6 +6,10 @@
 //import './js/hw-04.js'
 //import './js/module-5-1-constructor.js'
 //import './js/mentor.js'
-import './js/module-5-1.js'
-import './js/module-5-1-classes.js'
+//import './js/module-5-1.js'
+//import './js/module-5-1-classes.js'
+//import './js/module-5-2.js'
+//import './js/module-5-2-class.js'
+import './js/module-5-tasks.js'
+// import './js/module-5-2-function.js'
 
