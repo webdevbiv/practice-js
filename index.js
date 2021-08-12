@@ -12,5 +12,9 @@
 //import './js/module-5-2-class.js'
 //import './js/module-5-tasks.js'
 // import './js/module-5-2-function.js'
-import './js/hw-05.js'
+// import './js/hw-05.js'
+// import './js/module-6-1.js'
+//import './js/module-6-2.js'
+import './js/hw-06.js'
+
 
